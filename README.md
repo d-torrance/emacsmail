@@ -13,6 +13,7 @@ Usage
 
 ```
 sudo make install
+make mime
 ```
 
 By default, the script and .desktop file are installed under
@@ -26,19 +27,6 @@ or, installing without root access:
 
 ```
 make install prefix=~/.local
-```
-
-`emacsmail` should be set as the default mailto handler automatically.
-You can confirm this by running:
-
-```
-xdg-mime query default x-scheme-handler/mailto
-```
-
-If another application appears, then run:
-
-```
-xdg-mime default emacsmail.desktop x-scheme-handler/mailto
 ```
 
 License

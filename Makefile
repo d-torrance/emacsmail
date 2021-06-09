@@ -3,6 +3,7 @@ prefix = /usr/local
 bindir = $(prefix)/bin
 applicationsdir = $(prefix)/share/applications
 
+.PHONY: all install uninstall mime
 all:
 
 install: $(DESTDIR)$(bindir) $(DESTDIR)$(applicationsdir)
@@ -13,6 +14,9 @@ install: $(DESTDIR)$(bindir) $(DESTDIR)$(applicationsdir)
 uninstall:
 	rm $(DESTDIR)$(bindir)/emacsmail
 	rm $(DESTDIR)$(applicationsdir)/emacsmail.desktop
+
+mime:
+	xdg-mime default emacsmail.desktop x-scheme-handler/mailto
 
 $(DESTDIR)$(bindir): $(DESTDIR)
 	mkdir -p $@
