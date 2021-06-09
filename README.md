@@ -5,7 +5,7 @@ This is a small script (heavily inspired by [1,2]) that enables
 opening mailto: links from a web browser in Emacs.
 
 
-[1] https://www.emacswiki.org/emacs/MailtoHandler
+[1] https://www.emacswiki.org/emacs/MailtoHandler  
 [2] https://superuser.com/a/559270
 
 Usage
