@@ -10,6 +10,10 @@ install: $(DESTDIR)$(bindir) $(DESTDIR)$(applicationsdir)
 	$(INSTALL) -m 644 emacsmail.desktop \
 		$(DESTDIR)$(applicationsdir)/emacsmail.desktop
 
+uninstall:
+	rm $(DESTDIR)$(bindir)/emacsmail
+	rm $(DESTDIR)$(applicationsdir)/emacsmail.desktop
+
 $(DESTDIR)$(bindir): $(DESTDIR)
 	mkdir -p $@
 
